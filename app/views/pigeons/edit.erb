@@ -3,6 +3,7 @@
 <h1>Edit Pigeon</h1>
 
 <form action="/pigeons/<%= @pigeon.id %>/update" method="post">
+  <input type="hidden" name="_method" value="patch">
   <label for="name">Name</label>
   <input type="text" id="name" name="name" value="<%= @pigeon.name %>">
   <label for="gender">Gender</label>
