@@ -2,7 +2,32 @@
 
   <h1>Pigeons</h1>
   
-  <!-- show a table that lists all pigeons here -->
+ <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Color</th>
+        <th>Lives</th>
+        <th class="change"></th>
+        <th class="change"></th>
+        <th class="change"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pigeons.each do |pigeon| %>
+      <tr>
+        <td><%= pigeon.name %></td>
+        <td><%= pigeon.gender %></td>
+        <td><%= pigeon.color %></td>
+        <td><%= pigeon.lives %></td>
+        <td><a href="/pigeons/<%= pigeon.id %>">Show</a></td>
+        <td><a href="/pigeons/<%= pigeon.id %>/edit">Edit</a></td>
+        <td><a href="/pigeons/<%= pigeon.id %>/destroy">Destroy</a></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
   <a class="button" href="/pigeons/new">New Pigeon</a>
   
