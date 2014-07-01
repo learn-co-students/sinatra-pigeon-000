@@ -43,7 +43,7 @@ class PigeonsController < ApplicationController
   end
 
   #update
-  post '/pigeons/:id/update' do
+  patch '/pigeons/:id/update' do
     p = Pigeon.find_by(:id => params[:id])
     p.name = params[:name]
     p.gender = params[:gender]
@@ -57,7 +57,7 @@ class PigeonsController < ApplicationController
   end
 
   #destroy
-  get '/pigeons/:id/destroy' do
+  post '/pigeons/:id/destroy' do
     p = Pigeon.find_by(:id => params[:id])
     if p.destroy
       redirect to('/pigeons')
