@@ -1,6 +1,10 @@
 <%= erb :'layouts/_header' %>
 
   <h1>Pigeons</h1>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   <table>
     <thead>
       <tr>
@@ -8,26 +12,28 @@
         <th>Gender</th>
         <th>Color</th>
         <th>Lives</th>
-        <th class="change"></th>
-        <th class="change"></th>
-        <th class="change"></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      <% @pigeons.each do |pigeon| %>
+    <% @pigeons.each do |pigeon| %>
       <tr>
         <td><%= pigeon.name %></td>
         <td><%= pigeon.gender %></td>
         <td><%= pigeon.color %></td>
         <td><%= pigeon.lives %></td>
-        <td><a href="/pigeons/<%= pigeon.id %>">Show</a></td>
-        <td><a href="/pigeons/<%= pigeon.id %>/edit">Edit</a></td>
-        <td><a href="/pigeons/<%= pigeon.id %>/destroy">Destroy</a></td>
+        <td><form action="/pigeons/<%= pigeon.id %>/edit" method="GET">
+          <input type="submit" value="Edit" />
+        </form></td>
+        <td><form action="/pigeons/<%= pigeon.id %>/destroy" method="POST">
+          <input type="submit" value="Destroy" />
+        </form></td>
       </tr>
-      <% end %>
+    <% end %>
     </tbody>
   </table>
 
   <a class="button" href="/pigeons/new">New Pigeon</a>
-  
+
 <%= erb :'layouts/_footer' %>
