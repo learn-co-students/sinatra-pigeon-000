@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 1) do
 
-  create_table "pigeons", force: true do |t|
+  create_table "pigeons", force: :cascade do |t|
     t.string "name"
     t.string "color"
     t.string "lives"
