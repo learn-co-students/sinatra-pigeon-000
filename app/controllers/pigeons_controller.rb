@@ -28,13 +28,13 @@ class PigeonsController < ApplicationController
     erb :"pigeons/edit"
   end
 
-  post '/pigeons/:id/destroy' do
+  delete '/pigeons/:id' do
     @pigeon = Pigeon.find(params[:id])
     @pigeon.destroy
     redirect "/pigeons"
   end
 
-  patch '/pigeons/:id/update' do
+  patch '/pigeons/:id' do
     @pigeon = Pigeon.find(params[:id])
     @pigeon.name = params["name"]
     @pigeon.color = params["color"]
