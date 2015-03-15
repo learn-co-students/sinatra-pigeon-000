@@ -1,4 +1,5 @@
 class PigeonsController < ApplicationController
+
   get '/pigeons' do
     @pigeons = Pigeon.all
     erb :"pigeons/index"
@@ -6,16 +7,6 @@ class PigeonsController < ApplicationController
 
   get '/pigeons/new' do
     erb :"pigeons/new"
-  end
-
-  post '/pigeons' do
-    @pigeon = Pigeon.new
-    @pigeon.name = params["name"]
-    @pigeon.color = params["color"]
-    @pigeon.gender = params["gender"]
-    @pigeon.lives = params["lives"]
-    @pigeon.save
-    redirect "/pigeons"
   end
 
   get '/pigeons/:id' do
@@ -28,9 +19,13 @@ class PigeonsController < ApplicationController
     erb :"pigeons/edit"
   end
 
-  delete '/pigeons/:id' do
-    @pigeon = Pigeon.find(params[:id])
-    @pigeon.destroy
+  post '/pigeons' do
+    @pigeon = Pigeon.new(params)
+    @pigeon.name = params["name"]
+    @pigeon.color = params["color"]
+    @pigeon.gender = params["gender"]
+    @pigeon.lives = params["lives"]
+    @pigeon.save
     redirect "/pigeons"
   end
 
@@ -41,20 +36,13 @@ class PigeonsController < ApplicationController
     @pigeon.gender = params["gender"]
     @pigeon.lives = params["lives"]
     @pigeon.save
-
-    redirect "/pigeons"
-  end
-
-  post '/pigeons/:id' do
-    @pigeon = Pigeon.find(params[:id])
-    @pigeon.name = params["name"]
-    @pigeon.color = params["color"]
-    @pigeon.gender = params["gender"]
-    @pigeon.lives = params["lives"]
-    @pigeon.save
     redirect "/pigeons/#{@pigeon.id}"
   end
 
-
+  delete '/pigeons/:id' do
+    @pigeon = Pigeon.find(params[:id])
+    @pigeon.destroy
+    redirect "/pigeons"
+  end
 
 end

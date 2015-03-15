@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class CreatePigeons < ActiveRecord::Migration
   def change
     create_table :pigeons do |t|
@@ -8,3 +9,10 @@ class CreatePigeons < ActiveRecord::Migration
     end
   end
 end
+=======
+# write your pigeon migration here
+# look at the seed.rb file to see
+# what columns to include
+
+# remember to inherit from the correct ActiveRecord module
+>>>>>>> master
