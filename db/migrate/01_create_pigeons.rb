@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class CreatePigeons < ActiveRecord::Migration
   def change
     create_table :pigeons do |t|
@@ -15,4 +14,3 @@ end
 # what columns to include
 
 # remember to inherit from the correct ActiveRecord module
->>>>>>> master
