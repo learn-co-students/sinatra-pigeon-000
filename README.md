@@ -12,15 +12,15 @@ Create a Sinatra app that lists all pigeons, can create new ones, shows individu
 
 ## Instructions
 
-* Fork this repo. 
+* Fork this repo.
 * Clone your fork and cd into the newly created directory.
-* From terminal run `bundle install`. 
+* From terminal run `bundle install`.
 * To view a list of available rake tasks, run `rake -T`.
 * Write your migration for pigeons. Take a look at `db/seeds.rb` for table's structure hints.
 * Run `rake db:migrate` to migrate the pigeon table.
 * Run `rake db:seed` to load the information in the seed file into your database.
 * In `app/models/pigeons.rb`, write your pigeon model.
-* Flesh out the `app/controllers/pigeons_controller.rb` and views to fulfill the requirements below. Remember to make use of the appropriate RESTful paths to create, read, update, and destroy pigeons. 
+* Flesh out the `app/controllers/pigeons_controller.rb` and views to fulfill the requirements below. Remember to make use of the appropriate RESTful paths to create, read, update, and destroy pigeons.
 
 ## Requirements
 * Include the following paths:
@@ -36,11 +36,11 @@ Create a Sinatra app that lists all pigeons, can create new ones, shows individu
   * new.erb
   * show.erb
   * edit.erb
-* Fill in these views with the appropriate ERB code and HTML to match the example solution at:  
-  * [http://sinatra-pigeon.herokuapp.com/](http://sinatra-pigeon.herokuapp.com/).
+* Fill in these views with the appropriate ERB code and HTML to match the example solution at:
+  * [http://flatironschool-sinatra-pigeons.herokuapp.com](http://flatironschool-sinatra-pigeons.herokuapp.com).
 * Run `shotgun` in terminal to test out the web app at [localhost:9393/](http://localhost:9393/).
 * Run `rake db:migrate SINATRA_ENV=test` before running `rspec`.
 
 ## Resources
-* [Heroku](http://www.heroku.com/) - [Pigeon App](http://sinatra-pigeon.herokuapp.com/pigeons)
+* [Heroku](http://www.heroku.com/) - [Pigeon App](http://flatironschool-sinatra-pigeons.herokuapp.com)
 * [Screencasts](http://screencasts.org/) - [Using ActiveRecord with Sinatra](http://screencasts.org/episodes/activerecord-with-sinatra)
