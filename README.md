@@ -38,6 +38,7 @@ Create a Sinatra app that lists all pigeons, can create new ones, shows individu
   * edit.erb
 * Fill in these views with the appropriate ERB code and HTML to match the example solution at:
   * [http://flatironschool-sinatra-pigeons.herokuapp.com](http://flatironschool-sinatra-pigeons.herokuapp.com).
+  * Hint: note when creating your forms that most browsers don’t support methods other than GET and POST. When creating the form for PATCH and DELETE, you'll want to use the `_method` hack to make POST requests look like other request methods (e.g. PATCH, DELETE). For an example of the necessary hidden input, visit [this stackoverflow page](http://stackoverflow.com/questions/7005629/how-to-create-a-delete-form-with-restful-routes-in-rails)
 * Run `shotgun` in terminal to test out the web app at [localhost:9393/](http://localhost:9393/).
 * Run `rake db:migrate SINATRA_ENV=test` before running `rspec`.
 
