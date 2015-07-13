@@ -1,9 +1,3 @@
----
-  language: ruby
-  tags: sinatra, forms, hashes, object orientation, mvc, rest, erb, ActiveRecord
-  resources: 2
----
-
 # Sinatra Pigeon
 
 ## Objectives
