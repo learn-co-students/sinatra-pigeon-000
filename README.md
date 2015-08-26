@@ -12,8 +12,8 @@ Create a Sinatra app that lists all pigeons, can create new ones, shows individu
 * To view a list of available rake tasks, run `rake -T`.
 * Write your migration for pigeons. Take a look at `db/seeds.rb` for table's structure hints.
 * Run `rake db:migrate` to migrate the pigeon table.
-* Run `rake db:seed` to load the information in the seed file into your database.
 * In `app/models/pigeons.rb`, write your pigeon model.
+* Run `rake db:seed` to load the information in the seed file into your database.
 * Flesh out the `app/controllers/pigeons_controller.rb` and views to fulfill the requirements below. Remember to make use of the appropriate RESTful paths to create, read, update, and destroy pigeons.
 
 ## Requirements
