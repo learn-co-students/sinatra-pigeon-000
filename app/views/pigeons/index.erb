@@ -3,6 +3,23 @@
   <h1>Pigeons</h1>
   
   <!-- show a table that lists all pigeons here -->
+  <table>
+  	<tr>
+  		<th>Name</th>
+  		<th>Color</th>
+  		<th>Gender</th>
+  		<th>Lives</th>
+  	</tr>
+  	<% @pigeons.each do |pigeon| %>
+  	<tr>
+  		<th><%= pigeon.name %></th>
+  		<th><%= pigeon.color %></th>
+  		<th><%= pigeon.gender %></th>
+  		<th><%= pigeon.lives %></th>
+  	</tr>
+  	<% end %>
+
+  </table>
 
   <a class="button" href="/pigeons/new">New Pigeon</a>
   
