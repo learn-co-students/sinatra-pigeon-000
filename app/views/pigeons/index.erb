@@ -3,6 +3,42 @@
   <h1>Pigeons</h1>
   
   <!-- show a table that lists all pigeons here -->
+  <table>
+  	<tr>
+  		<th>Name</th>
+  		<th>Color</th>
+  		<th>Gender</th>
+  		<th>Lives</th>
+      <th></th>
+      <th></th>
+      <th></th>
+  	</tr>
+  	<% @pigeons.each do |pigeon| %>
+  	<tr>
+  		<td><%= pigeon.name %></td>
+  		<td><%= pigeon.color %></td>
+  		<td><%= pigeon.gender %></td>
+  		<td><%= pigeon.lives %></td>
+      <td>
+      <form action="/pigeons/<%= pigeon.id %>" method="GET">
+      <input type="submit" value="Show">
+      </form>
+      </td>
+      <td>
+      <form action="/pigeons/<%= pigeon.id %>/edit" method="GET">
+      <input type="submit" value="Edit">
+      </form>
+      </td>
+      <td>
+      <form action="/pigeons/<%= pigeon.id %>" method="POST">
+      <input type="hidden" name"_method" value="DELETE">
+      <input type="submit" value="Delete">
+      </form> 
+      </td>
+  	</tr>
+  	<% end %>
+
+  </table>
 
   <a class="button" href="/pigeons/new">New Pigeon</a>
   

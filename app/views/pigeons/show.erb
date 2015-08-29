@@ -1,6 +1,19 @@
 <%= erb :'layouts/_header' %>
 
-  <img src="http://<%= @pigeon.color.delete("[],\"").split.first %>pigeon.jpg.to/" width="300">
+  <img src="http://<%= @pigeon.color.delete("[],\"").split.first %>pigeon.jpg.to/" width="300"><br>
+
+  Name: <%= @pigeon.name %><br>
+  Color: <%= @pigeon.color %><br>
+  Gender: <%= @pigeon.gender %><br>
+  Lives: <%= @pigeon.lives %><br>
+
+  <form action=<%= "/pigeons/#{@pigeon.id}" %> method="POST">
+  	<input type="hidden" name="_method" value="DELETE">
+  	<input type="submit" value="Delete">
+  </form>
+
+  <a class="button" href="<%= "/pigeons/#{@pigeon.id}/edit" %>">Edit this Pigeon</a><br>
+  <a class="button" href="/pigeons">See all Pigeons</a>
 
   <!-- show attributes for a single pigeon here -->
 
