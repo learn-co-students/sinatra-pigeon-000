@@ -9,13 +9,31 @@
   		<th>Color</th>
   		<th>Gender</th>
   		<th>Lives</th>
+      <th></th>
+      <th></th>
+      <th></th>
   	</tr>
   	<% @pigeons.each do |pigeon| %>
   	<tr>
-  		<th><%= pigeon.name %></th>
-  		<th><%= pigeon.color %></th>
-  		<th><%= pigeon.gender %></th>
-  		<th><%= pigeon.lives %></th>
+  		<td><%= pigeon.name %></td>
+  		<td><%= pigeon.color %></td>
+  		<td><%= pigeon.gender %></td>
+  		<td><%= pigeon.lives %></td>
+      <td>
+      <form action="/pigeons/<%= pigeon.id %>" method="GET">
+      <input type="submit" value="Show">
+      </form>
+      </td>
+      <td>
+      <form action="/pigeons/<%= pigeon.id %>/edit" method="GET">
+      <input type="submit" value="Edit">
+      </form>
+      </td>
+      <td>
+      <form action="/pigeons/<%= pigeon.id %>" method="POST">
+      <input type="submit" value="Delete">
+      </form> 
+      </td>
   	</tr>
   	<% end %>
 

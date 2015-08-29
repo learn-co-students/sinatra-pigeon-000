@@ -27,10 +27,20 @@ class PigeonsController < ApplicationController
 		redirect '/pigeons'
 	end
 
-	delete "/pigeons/:id" do
+	post "/pigeons/:id" do
 		pigeon = Pigeon.find_by(id: (params[:id]))
 		pigeon.destroy
 		redirect '/pigeons'
+	end
+
+	post "/save/:id" do
+		pigeon = Pigeon.find_by(id: (params[:id]))
+		pigeon.name = params[:name]
+		pigeon.color = params[:color]
+		pigeon.gender = params[:gender]
+		pigeon.lives = params[:lives]
+		pigeon.save
+		redirect "/pigeons/#{params[:id]}"
 	end
 
 end
