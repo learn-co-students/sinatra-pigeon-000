@@ -2,7 +2,7 @@
 
 <h1>Edit Pigeon</h1>
 
-<form action="<%= "/save/#{@pigeon.id}" %>" method="POST">
+<form action="<%= "/pigeons/#{@pigeon.id}" %>" method="POST">
 <input type="hidden" name"_method" value="PATCH">
 <label for="name">Edit Name:</label>
 <input type="text" name="name" value="<%= @pigeon.name %>">

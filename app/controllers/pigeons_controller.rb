@@ -27,13 +27,13 @@ class PigeonsController < ApplicationController
 		redirect '/pigeons'
 	end
 
-	post "/pigeons/:id" do
+	delete "/pigeons/:id" do
 		pigeon = Pigeon.find_by(id: (params[:id]))
 		pigeon.destroy
 		redirect '/pigeons'
 	end
 
-	post "/save/:id" do
+	patch "/pigeons/:id" do
 		pigeon = Pigeon.find_by(id: (params[:id]))
 		pigeon.name = params[:name]
 		pigeon.color = params[:color]
