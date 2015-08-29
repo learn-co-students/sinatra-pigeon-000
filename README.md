@@ -38,4 +38,3 @@ Create a Sinatra app that lists all pigeons, can create new ones, shows individu
 
 ## Resources
 * [Heroku](http://www.heroku.com/) - [Pigeon App](http://flatironschool-sinatra-pigeons.herokuapp.com)
-* [Screencasts](http://screencasts.org/) - [Using ActiveRecord with Sinatra](http://screencasts.org/episodes/activerecord-with-sinatra)
