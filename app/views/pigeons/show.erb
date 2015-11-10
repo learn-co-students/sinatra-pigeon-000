@@ -3,5 +3,32 @@
   <img src="http://<%= @pigeon.color.delete("[],\"").split.first %>pigeon.jpg.to/" width="300">
 
   <!-- show attributes for a single pigeon here -->
+  <h3>Pigeon: <%= @pigeon.name %></h3>
+  <table>
+  	<tr>
+  		<th>Color</th>
+  		<th>Lives</th>
+  		<th>Gender</th>
+  		<th>Edit</th>
+  		<th>Remove</th>
+  	</tr>
+  	<tr>
+  		<td><%= @pigeon.color %></td>
+  		<td><%= @pigeon.lives %></td>
+  		<td><%= @pigeon.gender %></td>
+      	<td>
+      		<form action='<%= "/pigeons/#{@pigeon.id}/edit" %>' method='GET'>
+      			<input type='submit' value='...'>
+      		</form>
+      	</td>
+      	<td>
+      		<form action='<%= "/pigeons/#{@pigeon.id}" %>' method='POST'>
+      			<input name='_method' type='hidden' value='DELETE'>
+      			<input type='submit' value='X'>
+      		</form>
+      	</td>
+  	</tr>
+  </table>
+  <a href='/pigeons'>Back to all pigeons</a>
 
 <%= erb :'layouts/_footer' %>
