@@ -4,6 +4,19 @@
 
 <!-- form goes here -->
 
+<form action="/pigeons/<%= @pigeon.id %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="name">Edit Name:</label>
+  <input type="text" name="name" value="<%= @pigeon.name %>">
+  <label for="name">Edit Color:</label>
+  <input type="text" name="color" value="<%= @pigeon.color %>">
+  <label for="name">Edit Gender:</label>
+  <input type="text" name="gender" value="<%= @pigeon.gender %>">
+  <label for="name">Edit Home:</label>
+  <input type="text" name="lives" value="<%= @pigeon.lives %>">
+  <input type="submit" value="Update">
+</form>
+
 <a class="button" href="/pigeons">Cancel</a>
 
 <%= erb :'layouts/_footer' %>
