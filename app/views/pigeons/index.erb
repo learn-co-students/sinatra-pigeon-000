@@ -4,6 +4,33 @@
   
   <!-- show a table that lists all pigeons here -->
 
+  <table>
+      <tr>
+        <th> Name </th>
+        <th> Color </th>
+        <th> Gender </th>
+        <th> Lives </th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    <% Pigeon.all.each do |pigeon| %>
+      <tr>
+        <td> <%= pigeon.name %> </td>
+        <td> <%= pigeon.color %> </td>
+        <td> <%= pigeon.gender %> </td>
+        <td> <%= pigeon.lives %> </td>
+        <td> <a class="button" href="/pigeons/<%= pigeon.id %>">Show</a> </td>
+        <td> <a class="button" href="/pigeons/<%= pigeon.id %>/edit">Edit</a> </td>
+        <td> <form action="/pigeons/<%= pigeon.id %>" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Destory">
+             </form> 
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
   <a class="button" href="/pigeons/new">New Pigeon</a>
   
 <%= erb :'layouts/_footer' %>
