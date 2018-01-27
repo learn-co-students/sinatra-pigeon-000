@@ -2,7 +2,21 @@
 
 <h1>New Pigeon</h1>
 
-<!-- form goes here -->
+<form action="/pigeons" method="POST">
+  <label for="pigeon_name">Name</label><br>
+  <input id="pigeon_name" type="text" name="pigeon[name]" /><br>
+
+  <label for="pigeon_color">Color</label><br>
+  <input id="pigeon_color" type="text" name="pigeon[color]" /><br>
+
+  <label for="pigeon_gender">Gender</label><br>
+  <input id="pigeon_gender" type="text" name="pigeon[gender]" /><br>
+
+  <label for="pigeon_lives">Lives</label><br>
+  <input id="pigeon_lives" type="text" name="pigeon[lives]" /><br>
+
+  <input type="submit" value="Create New Pigeon">
+</form>
 
 <a class="button" href="/pigeons">Cancel</a>
 
